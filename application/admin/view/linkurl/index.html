@@ -1,0 +1,37 @@
+{include file="../../../application/admin/view/public/head" /}
+<div class="page-container p10">
+
+    <div class="my-toolbar-box">
+
+
+    </div>
+
+    <form class="layui-form " method="post" id="pageListForm">
+        <table class="layui-table" lay-size="sm">
+            <thead>
+            <tr>
+
+                <th >电影名称</th>
+                <th width="60%">推广短链接地址</th>
+
+            </tr>
+            </thead>
+
+            {volist name="datas" id="vo"}
+            <tr>
+
+                <td>{$vo.name}</td>
+                <td>{$vo.surl}</td>
+            </tr>
+            {/volist}
+            </tbody>
+        </table>
+        <div id="pages" class="center"></div>
+    </form>
+</div>
+
+{include file="../../../application/admin/view/public/foot" /}
+
+
+</body>
+</html>
